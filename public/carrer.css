@@ -1,0 +1,132 @@
+/* career.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    background-color: #333;
+    padding: 10px 20px; /* Reduced padding */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow for better appearance */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;  /* Reduced size of logo */
+    height: auto;
+    margin-right: 10px; /* Added space between logo and text */
+}
+
+.logo-text {
+    font-size: 24px; /* Adjust logo text size */
+    font-weight: bold;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Reduced font size */
+    padding: 8px 15px; /* Added padding for better clickability */
+    transition: all 0.3s ease; /* Added smooth hover transition */
+}
+
+.navbar a:hover {
+    background-color: #444; /* Add hover effect for better user interaction */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.navbar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.investors-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.investor-profile {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.investor-image {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.investor-profile h2 {
+    font-size: 20px; /* Reduced font size */
+    color: #333;
+}
+
+.investor-profile p {
+    font-size: 14px; /* Reduced font size */
+    color: #555;
+}
+/* career.css - Add this at the end of your file */
+
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: white;
+    padding: 20px 0; /* Padding for space around the content */
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-right a:hover {
+    text-decoration: underline; /* Underline effect when hovering over links */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
+}

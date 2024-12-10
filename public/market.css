@@ -1,0 +1,428 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+/* Stock Data Section */
+#stock-data-container {
+    padding: 40px 10%;
+    background: linear-gradient(to right, #2c3e50, #34495e); /* Gradient background */
+    color: white;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: tableLoad 1.5s ease-in-out;
+}
+
+@keyframes tableLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#stock-table th, #stock-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#stock-table th {
+    background-color: #fefefe;
+    color: rgb(0, 221, 241);
+}
+
+#stock-table td {
+    background-color: #151414;
+}
+
+#stock-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Stock Data Section */
+#stock-data-container {
+    padding: 40px 10%;
+    background: linear-gradient(to bottom right, #1f4037, #99f2c8); /* Vibrant green gradient */
+    color: white;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+#stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+#stock-table th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#stock-table td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+ /* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Market Latest News Section */
+#news-container {
+    background: linear-gradient(145deg, #ff6bd5, #e7e6e2); /* Vibrant Red-Yellow Gradient */
+    color: #ffffff !important; /* Enforce white text */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 1s;
+}
+
+#news-container * {
+    color: #ffffff !important; /* Ensure all child elements use white */
+}
+
+#news-container h3 {
+    color: #ffa502 !important; /* Bright Orange for heading */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
+}
+
+/* Highlights Section */
+#highlights-container {
+    background: linear-gradient(145deg,  #e1dce7, #8d47a8); /* Purple-Blue Gradient */
+    color: #ffffff !important; /* Enforce white text */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 1.5s;
+}
+
+#highlights-container * {
+    color: #ffffff !important; /* Ensure all child elements use white */
+}
+
+#highlights-container h3 {
+    color: #20c997 !important; /* Vibrant Green for heading */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for contrast */
+}
+
+/* History Section */
+#history-container {
+    background: linear-gradient(145deg, #2c7744, #6dd5ed); /* Green-Aqua Gradient */
+    color: #ffffff !important; /* Enforce white text */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 2s;
+}
+
+#history-container * {
+    color: #ffffff !important; /* Ensure all child elements use white */
+}
+
+#history-container h3 {
+    color: #ffd700 !important; /* Gold for heading */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for contrast */
+}
+
+/* Common Text Styling */
+#news-container p, #highlights-container p, #history-container p {
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff !important; /* Enforce white for paragraphs */
+}
+/* Remove underline for all text in Market sections */
+#news-container a, #news-container *, 
+#highlights-container a, #highlights-container *, 
+#history-container a, #history-container * {
+    text-decoration: none !important; /* Remove underlines */
+}
+
+/* Specific for links (if they still need hover effects) */
+#news-container a:hover, 
+#highlights-container a:hover, 
+#history-container a:hover {
+    text-decoration: none; /* No underline even on hover */
+    color: #ffa502; /* Optional hover color (Bright Orange for Latest News) */
+}
+
+
+/* Stock Data Section */
+#stock-data-container {
+    background: linear-gradient(to bottom right, #1a2980, #26d0ce); /* Deep Blue Gradient */
+    color: #f4f4f4; /* Light Gray for text contrast */
+    margin-top: 30px;
+    padding: 40px 10%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+/* Footer Section */
+footer {
+    background: linear-gradient(145deg, #e1dce7, #8d47a8); /* Vibrant Blue-Purple Gradient */
+    color: #ffffff; /* White text color for contrast */
+    padding: 40px 20px;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s; /* Add fade-in animation */
+}
+
+/* Animation for footer */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Boxes */
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards; /* Fade in with left-to-right effect */
+}
+
+/* Animation for individual boxes */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Footer Heading Styles */
+.footer-box h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffd700; /* Gold color for headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for emphasis */
+}
+
+/* Footer Links Styling */
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: #dcdde1; /* Light gray for text */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+    color: #ffd700; /* Gold on hover */
+    transform: scale(1.05); /* Slightly enlarging links on hover */
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    color: #ffd700; /* Gold for icons */
+    font-size: 24px;
+    margin-right: 20px;
+    transition: transform 0.3s, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #6dd5ed; /* Aqua color for icons on hover */
+    transform: scale(1.3); /* Enlarging social icons on hover */
+}
+
+/* Footer Bottom Text */
+.footer-bottom {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+    color: #dcdde1; /* Light gray color for footer text */
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1.5s; /* Delay fade-in for bottom text */
+}
+
+/* Animation for footer bottom */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Header */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 0; /* Reduced padding for a more compact header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo-container .logo {
+    width: 35px; /* Smaller logo */
+    height: auto;
+}
+
+header .logo-text {
+    font-size: 22px; /* Smaller text size for a balanced look */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    gap: 15px; /* Reduced gap for a more compact menu */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; /* Reduced padding for smaller buttons */
+    font-size: 14px; /* Smaller font size for links */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header nav a:hover {
+    background-color: #2980b9; /* Light Blue */
+    transform: scale(1.05); /* Slight scaling on hover for elegance */
+}
+
+header nav a i {
+    margin-right: 8px;
+    font-size: 16px; /* Smaller icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .header-container {
+        padding: 0 15px; /* Adjusted for smaller screens */
+    }
+
+    header .logo-container {
+        gap: 5px; /* Reduced space between logo and text */
+    }
+
+    header nav {
+        gap: 12px; /* Smaller gap for menu items */
+    }
+
+    header nav a {
+        font-size: 13px; /* Adjusted for smaller screens */
+    }
+}
+

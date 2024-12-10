@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestock Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: wheat;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2d3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        header nav a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            background-color: #4d5d6e;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px 10%;
+        }
+
+        /* Reusable Section Styling */
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #2d3e50;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+       
+
+
+
+        #discussion {
+    background: linear-gradient(to right, rgba(52, 152, 219, 0.2), rgba(231, 76, 60, 0.2)), url('discussion-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#discussion:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#discussion-form input, #discussion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+#discussion-form input:focus, #discussion-form textarea:focus {
+    border: 2px solid #3498db;
+}
+
+#discussion-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#discussion-form button:hover {
+    background-color: #2980b9;
+}
+
+#comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+#comments-list li {
+    background-color: #fb9ee4;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+   
+}
+
+.comment-header {
+    font-weight: bold;
+    color: #2d3e50;
+    margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+        /* Section Backgrounds */
+        section#history {
+            background: linear-gradient(to right, rgba(52, 152, 219, 0.2), rgba(241, 196, 15, 0.2)), url('history-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        section#difficulties {
+            background: linear-gradient(to left, rgba(231, 76, 60, 0.2), rgba(52, 152, 219, 0.2)), url('difficulties-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        section#suggestions {
+            background: linear-gradient(to right, rgba(46, 204, 113, 0.2), rgba(26, 188, 156, 0.2)), url('suggestions-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        footer {
+    background-color: #2d3e50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #2980b9;
+}
+
+    </style>                   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="market.html" id="market-button"><i class="fas fa-chart-line"></i> Market</a> 
+            <a href="career.html"><i class="fas fa-briefcase"></i> Careers</a>
+            <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            <a href="https://bluestock.in/"><i class="fas fa-info-circle"></i> About Us</a>
+            <div class="dropdown">
+                <a href="#" id="admin-button"><i class="fas fa-user-shield"></i> Admin</a>
+                <div class="dropdown-content">
+                    <a href="account.html"><i class="fas fa-user"></i> Account</a>
+                    <a href="market.html"><i class="fas fa-chart-line"></i> Market</a>
+                    <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+                    <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="support.html"><i class="fas fa-headset"></i> Support Center</a>
+                </div>
+            </div>
+            <a href="support.html"><i class="fas fa-headset"></i> Support</a>
+            <a href="overview.html"><i class="fas fa-tachometer-alt"></i> Overview</a>
+            <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+            <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+            <a href="login.html" class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        </nav>      
+    </header>
+
+    <main>
+        <!-- History Section -->
+        <section id="history">
+            <h2>History of Bluestock Company</h2>
+            <p>Bluestock is a mobile trading platform that emerged in 2023 to revolutionize the way individuals learn about the stock market...</p>
+            <ul>
+                <li><a href="https://www.bluestock.com" target="_blank">Bluestock official website</a></li>
+                <li><a href="https://www.bluestockfintech.com/about" target="_blank">Bluestock Company Overview</a></li>
+            </ul>
+        </section>
+
+        <!-- Difficulties Section -->
+        <section id="difficulties">
+            <h2>Difficulties of a Trading Company</h2>
+            <p>Trading companies like Bluestock face several challenges...</p>
+            <ul>
+                <li><a href="https://www.investopedia.com" target="_blank">Challenges in the Trading Industry</a></li>
+                <li><a href="https://www.businessnewsdaily.com" target="_blank">Challenges of Starting a Trading Business</a></li>
+            </ul>
+        </section>
+
+        <!-- Suggestions Section -->
+        <section id="suggestions">
+            <h2>Suggestions for Trading</h2>
+            <p>To succeed in trading, one should diversify investments...</p>
+            <ul>
+                <li><a href="https://www.thebalance.com" target="_blank">10 Best Stock Market Tips</a></li>
+                <li><a href="https://www.investopedia.com" target="_blank">Stock Trading for Beginners</a></li>
+            </ul>
+        </section>
+<!-- Discussion Section -->
+<section id="discussion">
+    <h2><i class="fas fa-comments"></i> Join the Discussion</h2>
+    <p>Have questions or feedback about Bluestock? Share them below!</p>
+    <form id="discussion-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="comment">Your Comment:</label>
+        <textarea id="comment" name="comment" placeholder="Enter your comment" rows="5" required></textarea>
+
+        <button type="submit">Post Comment</button>
+    </form>
+
+    <h3>Recent Comments</h3>
+    <ul id="comments-list">
+        <!-- User comments will be dynamically added here -->
+    </ul>
+</section>    
+    </main>
+
+   <!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Bluestock. All Rights Reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+
+    <script src="blogs.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.investment-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-section,
+.share-suggestions,
+.user-activity {
+    margin-bottom: 20px;
+}
+
+.share-suggestions ul,
+.user-activity ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.share-suggestions li,
+.user-activity li {
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#no-shares-message {
+    color: red;
+    font-size: 1.2em;
+    text-align: center;
+}
+/* Simple Navbar Styling */
+header {
+    background-color: #2d3e50;
+    padding: 20px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #3e4a59;
+    border-radius: 5px;
+}
+
+.navbar a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}

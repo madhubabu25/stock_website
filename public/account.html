@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account.css">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/bluestock-logo.png" alt="Bluestock Logo" class="logo">
+                <span class="logo-text">Bluestock</span>
+            </div>
+            <nav class="navbar">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="market.html"><i class="fas fa-chart-line"></i> Market</a>
+                <a href="account.html" class="active"><i class="fas fa-user-circle"></i> My Account</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+                <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+                <a href="overview.html"><i class="fas fa-tachometer-alt"></i> Overview</a>
+                <a href="support.html"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="my-account" class="account-section anim">
+            <h2>My Account</h2>
+            <form id="account-form">
+                <div class="account-info">
+                    <label for="name"><strong>Name:</strong></label>
+                    <input type="text" id="name" value="John Doe" readonly>
+        
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" id="email" value="johndoe@example.com" readonly>
+        
+                    <label for="phone"><strong>Phone:</strong></label>
+                    <input type="tel" id="phone" value="+1 234 567 890" readonly>
+        
+                    <label for="address"><strong>Address:</strong></label>
+                    <input type="text" id="address" value="123 Wall Street, New York, NY" readonly>
+                </div>
+                <div class="account-buttons">
+                    <button type="button" id="edit-btn" class="btn">Edit</button>
+                    <button type="submit" id="save-btn" class="btn hidden">Save</button>
+                </div>
+            </form>
+        </section>
+        
+
+        <!-- Password and Security Section -->
+        <section id="password-security" class="account-section anim">
+            <h2>Password and Security</h2>
+            <div class="security-options">
+                <p><strong>Last Password Change:</strong> 3 months ago</p>
+                <button class="btn">Change Password</button>
+                <p><strong>Two-Factor Authentication:</strong> Enabled</p>
+                <button class="btn">Manage 2FA</button>
+            </div>
+        </section>
+
+        <!-- Activity Section -->
+        <section id="activity" class="account-section anim">
+            <h2>Activity</h2>
+            <ul class="activity-log">
+                <li>Logged in from New York on November 30, 2024</li>
+                <li>Purchased shares of XYZ Company on November 28, 2024</li>
+                <li>Updated profile information on November 20, 2024</li>
+            </ul>
+        </section>
+
+        <!-- My Balance Section -->
+        <section id="my-balance" class="account-section anim">
+            <h2>My Balance</h2>
+            <div class="balance-info">
+                <p><strong>Total Balance:</strong> $12,345.67</p>
+                <p><strong>Available Balance:</strong> $10,000.00</p>
+                <button class="btn">Add Funds</button>
+                <button class="btn">Withdraw</button>
+            </div>
+        </section>
+       <!-- Help Center Section -->
+<!-- Help Center Section -->
+<section class="fade-in-section help-center">
+    <div class="section-header">
+        <h2>Help Center</h2>
+    </div>
+    <div class="discussion-form">
+        <h3>Have a Question? Let Us Know</h3>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            
+            <label for="question">Your Question</label>
+            <textarea id="question" placeholder="Describe your issue or question"></textarea>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <div class="accessible-links">
+        <h3>Contact Us</h3>
+        <ul>
+            <li><a href="mailto:info@company.com">Email Us</a></li>
+            <li><a href="tel:+123456789">Call Us</a></li>
+            <li><a href="https://www.company.com/contact">Visit Our Contact Page</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section fade-in-section">
+    <div class="footer-section">
+        <h3>Company Description</h3>
+        <p>Bluestock is a leading platform offering comprehensive stock analysis...</p>
+    </div>
+    <div class="footer-section">
+        <h3>Stock Analysis</h3>
+        <a href="#">Stock Screener</a>
+        <a href="#">Market Trends</a>
+    </div>
+    <div class="footer-section">
+        <h3>Discussion</h3>
+        <a href="#">Investor Forum</a>
+    </div>
+    <div class="footer-section company-details">
+        <h3>Company Details</h3>
+        <p>Email: <a href="mailto:info@bluestock.com">info@bluestock.com</a></p>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Location: 123 Wall Street, NY</p>
+    </div>
+</footer>
+    
+</main>
+    <!-- JavaScript -->
+    <script>
+        // Intersection Observer for Animations
+        const sections = document.querySelectorAll('.anim');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => observer.observe(section));
+        // JavaScript for Edit and Save functionality
+const editBtn = document.getElementById('edit-btn');
+const saveBtn = document.getElementById('save-btn');
+const inputs = document.querySelectorAll('#account-form input');
+
+editBtn.addEventListener('click', () => {
+    // Enable input fields
+    inputs.forEach(input => {
+        input.removeAttribute('readonly');
+        input.style.backgroundColor = '#fff'; // Highlight editable fields
+    });
+    editBtn.classList.add('hidden');
+    saveBtn.classList.remove('hidden');
+});
+
+saveBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent form submission
+    // Disable input fields
+    inputs.forEach(input => {
+        input.setAttribute('readonly', true);
+        input.style.backgroundColor = '#e9e9e9';
+    });
+    saveBtn.classList.add('hidden');
+    editBtn.classList.remove('hidden');
+    alert('Changes saved successfully!');
+});
+// Function to add 'visible' class to sections on scroll
+function handleScrollAnimations() {
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Check if the section is in view
+        if (sectionTop < windowHeight - 100) {
+            section.classList.add('visible');
+        }
+    });
+}
+
+// Initialize scroll event listener
+window.addEventListener('scroll', handleScrollAnimations);
+// Function to check if a section is in view
+function checkVisibility() {
+    const sections = document.querySelectorAll('.help-center, .contact-us');
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            section.classList.add('visible');  // Add visible class when in view
+        }
+    });
+}
+
+// Trigger visibility check on scroll
+window.addEventListener('scroll', checkVisibility);
+
+// Initial check when the page loads
+document.addEventListener('DOMContentLoaded', checkVisibility);
+// JavaScript to add the 'visible' class when sections come into view
+window.addEventListener('scroll', function() {
+    var sections = document.querySelectorAll('.help-center, .contact-us, .accessible-links');
+
+    sections.forEach(function(section) {
+        var position = section.getBoundingClientRect();
+        
+        // Check if the section is in the viewport
+        if (position.top >= 0 && position.bottom <= window.innerHeight) {
+            section.classList.add('visible'); // Add 'visible' class to trigger animation
+        }
+    });
+});
+fetch('/api/user')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('name').value = data.name;
+    document.getElementById('email').value = data.email;
+    document.getElementById('phone').value = data.phone;
+    document.getElementById('address').value = data.address;
+  });
+  document.querySelector('.btn-add-money').addEventListener('click', () => {
+  const amount = prompt('Enter amount to add:');
+  fetch('/api/user/add-money', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ amount })
+  }).then(response => response.json()).then(alert);
+});
+
+document.querySelector('.btn-withdraw').addEventListener('click', () => {
+  const amount = prompt('Enter amount to withdraw:');
+  fetch('/api/user/withdraw', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ amount })
+  }).then(response => response.json()).then(alert);
+});
+
+
+    </script>
+</body>
+</html>

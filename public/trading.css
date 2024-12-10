@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+/* Header Styles */
+header {
+    background-color: #1e3d58;  /* Rich dark blue */
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #f39c12;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #f39c12;
+    text-shadow: 0 0 8px rgba(243, 156, 18, 0.8);
+}
+
+header nav i {
+    margin-right: 8px;
+}
+
+/* Header Buttons with Icons */
+header .header-buttons {
+    margin-top: 20px;
+}
+
+header .header-buttons button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+header .header-buttons button:hover {
+    background-color: #e67e22;
+}
+
+header .header-buttons button i {
+    margin-right: 8px;
+}
+
+/* Section Containers */
+.section-container {
+    padding: 25px;
+    margin: 25px auto;
+    width: 85%;
+    border-radius: 15px;
+    background-color: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.section-container:hover {
+    transform: scale(1.02);
+}
+/* Buy Section */
+.buy-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);  /* Soft pink to warm peach gradient */
+    color: white;
+    border-left: 5px solid #ff6f61;  /* Accent border to match the gradient */
+    padding: 50px;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.buy-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Sell Section */
+.sell-section {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);  /* Bold purple to blue gradient */
+    color: white;
+    border-left: 5px solid #8e44ad;  /* Accent border to match the gradient */
+    padding: 50px;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.sell-section h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+
+/* Stock Information Section */
+#stock-info {
+    background: linear-gradient(135deg, #5f9ea0, #2e8b57);  /* Teal to sea green gradient */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#stock-info h2 {
+    color: #fff;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#stock-details p {
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+#stock-details strong {
+    color: #2d3e50;
+}
+
+/* Footer Section */
+footer {
+    background: linear-gradient(135deg, #004d7a, #2a587f);  /* Deep ocean blue to teal */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    animation: footerAnimation 1s ease-out;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-section {
+    margin-bottom: 25px;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(243, 156, 18, 0.8);
+}
+
+/* Footer Animation */
+@keyframes footerAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

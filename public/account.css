@@ -1,0 +1,480 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: wheat;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #0056b3, #003f7f);
+    padding: 15px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.navbar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #ffcc00;
+}
+
+/* Section Styles */
+.account-section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.account-section.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.account-section:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0056b3;
+}
+
+.account-section h2 {
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+/* Editable Fields */
+.account-info input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+}
+
+.account-info input[readonly] {
+    background-color: #e9e9e9;
+    border: none;
+    cursor: default;
+}
+
+.hidden {
+    display: none;
+}
+
+.account-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    color: #a8c6e1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff;
+}
+/* Help Center Section */
+.help-center {
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-top: 3px solid #2d3e50;
+}
+
+.help-center h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.discussion-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.discussion-form h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.discussion-form label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.discussion-form input,
+.discussion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #2d3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #1e90ff;
+}
+
+.accessible-links {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accessible-links h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.accessible-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.accessible-links ul li {
+    margin-bottom: 10px;
+}
+
+.accessible-links a {
+    color: #2d3e50;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.accessible-links a:hover {
+    color: #1e90ff;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header (unchanged) */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #0056b3, #003f7f);
+    padding: 15px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Animatic Effect Styles */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer Section */
+footer {
+    background-color: #2d3e50;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Animatic Effect for Footer */
+footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Help Center Section */
+.help-center {
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-top: 3px solid #2d3e50;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.help-center.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.discussion-form,
+.accessible-links {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Us Section */
+.accessible-links {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.accessible-links.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styling for Accessible Links and Discussion Form */
+.accessible-links h3,
+.discussion-form h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.accessible-links a,
+.discussion-form a {
+    color: #2d3e50;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.accessible-links a:hover,
+.discussion-form a:hover {
+    color: #1e90ff;
+}
+ 
+.footer-section:hover {
+    background-color: #0056b3;
+    color: white;
+    border: 2px solid #ffcc00;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* General Fade-In Animation for Sections */
+.fade-in-section {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.fade-in-section.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* Animatic Effect for Sections */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Help Center and Contact Us Sections */
+.help-center, .contact-us {
+    background: white;
+    margin: 0 auto; /* Remove extra margin */
+    padding: 20px; /* Adjust padding if needed */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    animation: fadeInUp 0.8s ease-out; /* Apply fade-in effect */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Remove extra margin or padding */
+.help-center, .contact-us {
+    margin-top: 10px; /* Adjust this as needed to control space above sections */
+    margin-bottom: 10px; /* Adjust this as needed to control space below sections */
+}
+
+/* Trigger animation when these sections come into view */
+.help-center.visible, .contact-us.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional adjustments for headings */
+.help-center h2, .contact-us h2 {
+    margin-bottom: 15px;
+    color: #0056b3;  /* Ensure headings are visible */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Ensure heading stays visible on hover */
+.help-center h2:hover, .contact-us h2:hover {
+    color: #0056b3;  /* Keep color consistent on hover */
+}
+
+/* Adjusted padding for input and form elements */
+.discussion-form input,
+.discussion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Reduce margin if extra space is visible */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Placeholder Text for Inputs and Textareas */
+.discussion-form input::placeholder,
+.discussion-form textarea::placeholder {
+    color: #999; /* Lighter color for placeholders */
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.submit-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Accessible Links Section */
+.accessible-links {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.accessible-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.accessible-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.accessible-links ul li {
+    margin-bottom: 10px;
+}
+
+.accessible-links a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.accessible-links a:hover {
+    color: #ffcc00;
+}

@@ -1,0 +1,90 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background-image: url('assets/login-back.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative;
+}
+
+/* Overlay for better visibility */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1; /* Ensure overlay is behind content */
+}
+
+/* Form Container (centered in the middle of the page but moved to the left) */
+.form-container {
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for visibility */
+    z-index: 1;
+    transform: translateX(-60px); /* Moves the form slightly to the left */
+}
+
+/* Form heading */
+.form-container h2 {
+    color: #fff; /* White color for heading */
+    margin-bottom: 20px;
+}
+
+/* Form inputs and buttons */
+.form-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background for inputs */
+}
+
+.form-container .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container .link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Optional: Add animation effect for the form */
+.form-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation for smooth loading of form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.login-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Password Section */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.password-wrapper input[type="password"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.password-wrapper input[type="checkbox"] {
+    margin-left: 8px;
+}
+
+/* Button Style */
+form button {
+    background-color: #6a11cb;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2575fc;
+}
+
+.redirect-link {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.redirect-link a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.redirect-link a:hover {
+    color: #2575fc;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form id="login">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            
+            <label>
+                <input type="checkbox" id="show-password"> Show Password
+            </label>
+            
+            <button type="submit">Login</button>
+        </form>
+        <a href="signup.html" class="link">Don't have an account? Sign up</a>
+    </div>
+</body>
+<script>
+    const loginForm = document.getElementById("login");
+  
+    loginForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+  
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+  
+      try {
+        const response = await fetch("http://localhost:3000/login", { // Fixed endpoint
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        });
+  
+        const result = await response.json();
+  
+        if (response.ok) {
+          alert(result.message);
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1000);
+        } else {
+          alert(result.error);
+        }
+      } catch (error) {
+        console.error("Error during login:", error);
+        alert("An unexpected error occurred.");
+      }
+    });
+</script>
+
+</html>

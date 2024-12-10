@@ -1,0 +1,71 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 100%; /* Below the dropdown button */
+    left: 0;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a i {
+    color: #0056b3;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f8ff;
+    color: #0056b3;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Prevent Overlap with Hero Section */
+.hero {
+    margin-top: 10px;
+}

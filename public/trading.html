@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Indian Stocks</title>
+    <link rel="stylesheet" href="trading.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Trade Indian Stocks</h1>
+        <nav class="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="market.html" id="market-button"><i class="fas fa-chart-line"></i> Market</a> 
+            <a href="career.html"><i class="fas fa-briefcase"></i> Careers</a>
+            <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+            <a href="https://bluestock.in/"><i class="fas fa-info-circle"></i> About Us</a>
+            <div class="dropdown">
+                <a href="#" id="admin-button"><i class="fas fa-user-shield"></i> Admin</a>
+                <div class="dropdown-content">
+                    <a href="account.html"><i class="fas fa-user"></i> Account</a>
+                    <a href="market.html"><i class="fas fa-chart-line"></i> Market</a>
+                    <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+                    <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    <a href="support.html"><i class="fas fa-headset"></i> Support Center</a>
+                </div>
+            </div>
+            <a href="support.html"><i class="fas fa-headset"></i> Support</a>
+            <a href="overview.html"><i class="fas fa-tachometer-alt"></i> Overview</a>
+            <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+            <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+            <a href="login.html" class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        </nav>     
+    </header>
+
+    <!-- Buy Stocks Section -->
+    <section id="buy-stocks" class="section-container">
+        <h2>Buy Stocks</h2>
+        <form id="buy-form">
+            <label for="buy-stock-name">Stock Name:</label>
+            <input type="text" id="buy-stock-name" placeholder="Enter stock name" required>
+            <label for="buy-quantity">Quantity:</label>
+            <input type="number" id="buy-quantity" placeholder="Enter quantity" required>
+            <button type="submit">Place Buy Order</button>
+        </form>
+    </section>
+
+    <!-- Sell Stocks Section -->
+    <section id="sell-stocks" class="section-container">
+        <h2>Sell Stocks</h2>
+        <form id="sell-form">
+            <label for="sell-stock-name">Stock Name:</label>
+            <input type="text" id="sell-stock-name" placeholder="Enter stock name" required>
+            <label for="sell-quantity">Quantity:</label>
+            <input type="number" id="sell-quantity" placeholder="Enter quantity" required>
+            <button type="submit">Place Sell Order</button>
+        </form>
+    </section>
+
+    <!-- Stock Market Information Section -->
+    <a href="https://www.nseindia.com/" target="_blank">
+    <section  id="stock-info" class="section-container">
+        <h2>Stock Market Information</h2>
+        
+        <div id="stock-details">
+            <!-- This section will be dynamically updated with stock data -->
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-section">
+            <h3>Company Description</h3>
+            <p>
+                Bluestock is a leading platform offering comprehensive stock analysis and market insights. We aim to empower investors with the tools and information they need to make informed investment decisions.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@bluestock.com">info@bluestock.com</a></p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script src="trading.js"></script> <!-- Link to your JS file -->
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Move money-logo to the left */
+/* Show the links when hovering over the hero image */
+.hero-image:hover #suggested-links {
+    display: block;
+    opacity: 1; /* Make links visible */
+    transform: translateX(20px) translateY(-50%); /* Smooth movement */
+    z-index: 2; /* Ensure the links are above the image */
+}
+
+
+/* Styling for the money logo */
+#finance-symbol {
+    width: 250px; /* Adjust size as necessary */
+    height: auto;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1; /* Keep it behind the links */
+}
+
+
+/* Suggested Links initially hidden */
+.suggested-links {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateX(20px) translateY(-50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    color: rgb(6, 62, 246);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Styling for the links */
+.suggested-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggested-links li {
+    margin: 10px 0;
+}
+
+.suggested-links a {
+    color: #8097d1; /* Link color */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.suggested-links a:hover {
+    color: #5207f3; /* Hover effect on links */
+}
+
+/* Show the links when hovering over the money-logo */
+#finance-symbol:hover + #suggested-links {
+    display: block;
+    opacity: 1; /* Make links visible */
+    transform: translateX(20px) translateY(-50%); /* Smooth movement */
+}

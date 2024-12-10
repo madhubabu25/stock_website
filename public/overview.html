@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+        }
+
+        header {
+            background-color: #2d3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        header nav a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            background-color: #4d5d6e;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px 10%;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section div {
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Unique Section Colors */
+        #company-theme {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+
+        #user-activity {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        }
+
+        #performance-graph {
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+        }
+
+        #company-working-status {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="market.html" id="market-button"><i class="fas fa-chart-line"></i> Market</a> 
+        <a href="career.html"><i class="fas fa-briefcase"></i> Careers</a>
+        <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="https://bluestock.in/"><i class="fas fa-info-circle"></i> About Us</a>
+        <div class="dropdown">
+            <a href="#" id="admin-button"><i class="fas fa-user-shield"></i> Admin</a>
+            <div class="dropdown-content">
+                <a href="account.html"><i class="fas fa-user"></i> Account</a>
+                <a href="market.html"><i class="fas fa-chart-line"></i> Market</a>
+                <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+                <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="support.html"><i class="fas fa-headset"></i> Support Center</a>
+            </div>
+        </div>
+        <a href="support.html"><i class="fas fa-headset"></i> Support</a>
+        <a href="overview.html"><i class="fas fa-tachometer-alt"></i> Overview</a>
+        <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+        <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+        <a href="login.html" class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+    </nav>     
+</header>
+
+<main>
+    <section id="company-theme">
+        <img src="assets/comapany-theme.png" alt="Company Theme">
+        <div>
+            <h2>Company Theme</h2>
+            <p>Explore the innovative and dynamic culture of our company that drives excellence and sustainability.</p>
+        </div>
+    </section>
+
+    <section id="user-activity">
+        <img src="assets/activity.png" alt="User Activity">
+        <div>
+            <h2>User Activity</h2>
+            <p>Track user engagement, activity trends, and interactions on our platform in real-time.</p>
+        </div>
+    </section>
+
+    <section id="performance-graph">
+        <img src="assets/performance.png" alt="Performance Graph">
+        <div>
+            <h2>Performance Graph</h2>
+            <p>Analyze the performance metrics of our company with visually appealing and easy-to-read graphs.</p>
+        </div>
+    </section>
+
+    <section id="company-working-status">
+        <img src="assets/status.png" alt="Working Status">
+        <div>
+            <h2>Company Working Status</h2>
+            <p>Get updates on the operational status and productivity of our company for better insights.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Bluestock. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2d3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        header nav a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            background-color: #4d5d6e;
+            transform: scale(1.1);
+        }
+
+
+        main {
+            padding: 30px 10%;
+        }
+
+        section {
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: #2d3e50;
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer a:hover {
+            color: #3498db;
+        }
+
+        /* Unique Section Styles */
+        #account-issues {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        #technical-support {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #billing-payments {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        #faqs {
+            background-color: #f1c40f;
+            color: white;
+        }
+    </style>
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="market.html" id="market-button"><i class="fas fa-chart-line"></i> Market</a> 
+        <a href="career.html"><i class="fas fa-briefcase"></i> Careers</a>
+        <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="https://bluestock.in/"><i class="fas fa-info-circle"></i> About Us</a>
+        <div class="dropdown">
+            <a href="#" id="admin-button"><i class="fas fa-user-shield"></i> Admin</a>
+            <div class="dropdown-content">
+                <a href="account.html"><i class="fas fa-user"></i> Account</a>
+                <a href="market.html"><i class="fas fa-chart-line"></i> Market</a>
+                <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+                <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="support.html"><i class="fas fa-headset"></i> Support Center</a>
+            </div>
+        </div>
+        <a href="support.html"><i class="fas fa-headset"></i> Support</a>
+        <a href="overview.html"><i class="fas fa-tachometer-alt"></i> Overview</a>
+        <a href="trading.html"><i class="fas fa-chart-bar"></i> Trading</a>
+        <a href="investment.html"><i class="fas fa-hand-holding-usd"></i> Investment</a>
+        <a href="login.html" class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+    </nav>      
+</header>
+
+<main>
+    <!-- Account Issues Section -->
+    <section id="account-issues">
+        <h2><i class="fas fa-user"></i> Account Issues</h2>
+        <p>If you are facing issues with logging in, recovering your password, or updating your account information, check the resources below:</p>
+        <ul>
+            <li><a href="#">Reset Your Password</a></li>
+            <li><a href="#">Update Your Account Details</a></li>
+            <li><a href="#">Troubleshoot Login Issues</a></li>
+        </ul>
+    </section>
+
+    <!-- Technical Support Section -->
+    <section id="technical-support">
+        <h2><i class="fas fa-tools"></i> Technical Support</h2>
+        <p>Encountering technical problems? Use the guides below to resolve common technical issues:</p>
+        <ul>
+            <li><a href="#">Fix Connectivity Issues</a></li>
+            <li><a href="#">Resolve Website Errors</a></li>
+            <li><a href="#">Report a Bug</a></li>
+        </ul>
+    </section>
+
+    <!-- Billing and Payments Section -->
+    <section id="billing-payments">
+        <h2><i class="fas fa-money-bill-wave"></i> Billing and Payments</h2>
+        <p>For questions about your invoices, payments, or subscriptions, check these resources:</p>
+        <ul>
+            <li><a href="#">Understand Your Invoice</a></li>
+            <li><a href="#">Update Payment Method</a></li>
+            <li><a href="#">Resolve Payment Issues</a></li>
+        </ul>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs">
+        <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <p>Find quick answers to the most common queries:</p>
+        <ul>
+            <li><a href="#">Create an Account</a></li>
+            <li><a href="#">Supported Browsers</a></li>
+            <li><a href="#">Contact Customer Support</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Bluestock. All Rights Reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
